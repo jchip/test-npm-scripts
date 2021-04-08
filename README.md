@@ -6,6 +6,10 @@ Test npm scripts behaviors
 Installing self dependencies:
 
 ```
+$ npm -v
+6.14.12
+$ node -v
+v14.16.1
 $ npm i
 
 > @jchip/test-npm-scripts@1.0.0 preinstall /Users/home/projects/test-npm-scripts
@@ -41,6 +45,10 @@ found 0 vulnerabilities
 Publishing:
 
 ```
+$ npm -v
+6.14.12
+$ node -v
+v14.16.1
 $ npm publish
 
 > @jchip/test-npm-scripts@1.0.0 prepare .
@@ -82,4 +90,55 @@ npm notice integrity:     sha512-5NRH9MqPGdKTp[...]Li9dL4XtmhDIA==
 npm notice total files:   3
 npm notice
 + @jchip/test-npm-scripts@1.0.0
+```
+
+Installing as dep:
+
+```
+$ npm -v
+6.14.12
+$ node -v
+v14.16.1
+$ mkdir test-npm1 && cd test-npm1 && npm init --yes && npm i @jchip/test-npm-scripts
+Wrote to /Users/home/projects/test-npm1/package.json:
+
+{
+  "name": "test-npm1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+
+> @jchip/test-npm-scripts@1.0.0 preinstall /Users/home/projects/test-npm1/node_modules/@jchip/test-npm-scripts
+> echo Hello from npm script preinstall && pwd
+
+Hello from npm script preinstall
+/Users/home/projects/test-npm1/node_modules/@jchip/test-npm-scripts
+
+> @jchip/test-npm-scripts@1.0.0 install /Users/home/projects/test-npm1/node_modules/@jchip/test-npm-scripts
+> echo Hello from npm script install && pwd
+
+Hello from npm script install
+/Users/home/projects/test-npm1/node_modules/@jchip/test-npm-scripts
+
+> @jchip/test-npm-scripts@1.0.0 postinstall /Users/home/projects/test-npm1/node_modules/@jchip/test-npm-scripts
+> echo Hello from npm script postinstall && pwd
+
+Hello from npm script postinstall
+/Users/home/projects/test-npm1/node_modules/@jchip/test-npm-scripts
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN test-npm1@1.0.0 No description
+npm WARN test-npm1@1.0.0 No repository field.
+
++ @jchip/test-npm-scripts@1.0.0
+added 1 package and audited 1 package in 0.61s
+found 0 vulnerabilities
 ```
