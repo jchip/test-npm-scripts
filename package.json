@@ -1,0 +1,25 @@
+{
+  "name": "@jchip/test-npm-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com",
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "echo Hello from npm script prepare && pwd",
+    "prepublishOnly": "echo Hello from npm script prepublishOnly && pwd",
+    "prepack": "echo Hello from npm script prepack && pwd",
+    "postpack": "echo Hello from npm script postpack && pwd",
+    "preinstall": "echo Hello from npm script preinstall && pwd",
+    "install": "echo Hello from npm script install && pwd",
+    "postinstall": "echo Hello from npm script postinstall && pwd"
+  },
+  "dependencies": {
+    "@jchip/foo": "^1.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
